@@ -1,0 +1,55 @@
+body {
+	font-family: 'poppins', sans-serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	box-sizing: border-box;
+}
+
+.container {
+	background: #a8c0ff; /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+		to right,
+		#3f2b96,
+		#a8c0ff
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to right,
+		#3f2b96,
+		#a8c0ff
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	display: grid;
+	place-items: center;
+
+	height: 100vh;
+}
+
+.calculator {
+	width: 30%;
+	min-width: 400px;
+}
+
+.display {
+	/* Glassmorphic Container */
+	background: rgba(0, 0, 0, 0.25);
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	backdrop-filter: blur(6px);
+	-webkit-backdrop-filter: blur(6px);
+	border-radius: 10px;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+
+	height: 100px;
+	font-size: 3rem;
+	letter-spacing: 0.25rem;
+	text-align: end;
+	padding-block: 1.5rem;
+	padding-inline: 0.75rem;
+	color: white;
+}
