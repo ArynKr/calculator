@@ -10,6 +10,33 @@ let num1 = 0,
 	num2 = 0;
 let operation = '';
 
+document.addEventListener('keyup', (e) => {
+	console.log(e.key);
+	if (isFinite(e.key) || e.key == '.') {
+		append(e.key);
+		updateDisplay(curr);
+		console.log(num1, num2, curr);
+	} else if ('+-*/x'.includes(e.key)) {
+		operation = e.key;
+		num1 = curr === '' ? num1 : parseFloat(curr);
+		curr = '';
+		updateDisplay(curr);
+		console.log(num1, num2, curr, operation);
+	} else if (e.key === '=') {
+		console.log('eq');
+	} else if (e.key === 'Backspace') {
+		pop();
+		updateDisplay(curr);
+	} else if (e.key === 'Enter' || e.key === '=') {
+		if (operation === '') return;
+		num2 = parseFloat(curr);
+		curr = '';
+
+		solve();
+		updateDisplay(curr);
+	}
+});
+
 /* Clear Display */
 function clear() {
 	curr = '0';
@@ -60,14 +87,16 @@ Array.from(equals).forEach((equal) => {
 		if (operation === '') return;
 		num2 = parseFloat(curr);
 		curr = '';
+
 		solve();
+		console.log(num1, num2, curr);
 		updateDisplay(curr);
 	});
 });
 
 /* Display Update */
 function updateDisplay(str) {
-	display.innerHTML = str;
+	display.innerHTML = str === '' ? '0' : str;
 }
 
 /* Solve Function */
@@ -81,9 +110,11 @@ function solve() {
 			val = num1 - num2;
 			break;
 		case 'x':
+		case '*':
 			val = num1 * num2;
 			break;
 		case '÷':
+		case '/':
 			val = num1 / num2;
 			break;
 		default:
@@ -91,6 +122,7 @@ function solve() {
 	}
 	val = Math.round(val * 10000) / 10000.0;
 	curr = val.toString();
+	console.log(curr);
 }
 
 /* Backspace click */
