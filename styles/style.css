@@ -28,12 +28,16 @@ body {
 	display: grid;
 	place-items: center;
 
+	grid-template-rows: 100fr 1fr;
+
 	height: 100vh;
+	min-height: 700px;
 }
 
 .calculator {
 	width: 30%;
 	min-width: 400px;
+	max-width: 575px;
 	border-radius: 10px;
 	overflow: hidden;
 }
@@ -82,4 +86,11 @@ body {
 .eq {
 	grid-area: eq;
 	background-color: #f98c6b;
+}
+
+.footer {
+	color: rgba(255, 255, 255);
+	place-self: end;
+	justify-self: center;
+	padding: 20px;
 }
