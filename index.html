@@ -10,6 +10,13 @@
 			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
 			rel="stylesheet"
 		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+			integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
 
 		<title>Calc App</title>
 		<link rel="stylesheet" href="./styles/style.css" />
@@ -17,10 +24,36 @@
 	<body>
 		<div class="container">
 			<main class="calculator">
-				<section class="display">123</section>
+				<section class="display">0</section>
 
-				<section class="buttons"></section>
+				<section class="buttons">
+					<button accesskey="+" class="btn operators" id="add">+</button>
+					<button accesskey="-" class="btn operators" id="sub">-</button>
+					<button accesskey="*" class="btn operators" id="mul">x</button>
+					<button accesskey="/" class="btn operators" id="div">÷</button>
+					<button accesskey="7" class="btn num" id="seven">7</button>
+					<button accesskey="8" class="btn num" id="eight">8</button>
+					<button accesskey="9" class="btn num" id="nine">9</button>
+					<button accesskey="" class="btn clr" id="clear">
+						<i class="fa-solid fa-delete-left"></i>
+					</button>
+
+					<button class="btn num" id="four">4</button>
+					<button class="btn num" id="five">5</button>
+					<button class="btn num" id="six">6</button>
+					<button class="btn eq" id="eq1">=</button>
+					<button class="btn num" id="one">1</button>
+					<button class="btn num" id="two">2</button>
+					<button class="btn num" id="three">3</button>
+					<!-- <button class="btn eq" id="eq3">=</button> -->
+					<button class="btn num" id="zero">0</button>
+					<button class="btn num" id="point">.</button>
+					<button class="btn allclr">AC</button>
+
+					<!-- <button class="btn eq" id="eq4">=</button> -->
+				</section>
 			</main>
 		</div>
+		<script src="./js/index.js"></script>
 	</body>
 </html>

@@ -34,22 +34,52 @@ body {
 .calculator {
 	width: 30%;
 	min-width: 400px;
+	border-radius: 10px;
+	overflow: hidden;
 }
 
 .display {
 	/* Glassmorphic Container */
 	background: rgba(0, 0, 0, 0.25);
-	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 	backdrop-filter: blur(6px);
 	-webkit-backdrop-filter: blur(6px);
-	border-radius: 10px;
-	border: 1px solid rgba(255, 255, 255, 0.18);
 
-	height: 100px;
-	font-size: 3rem;
-	letter-spacing: 0.25rem;
+	height: 150px;
+	font-size: 3.5rem;
 	text-align: end;
-	padding-block: 1.5rem;
+	padding-bottom: 1.5rem;
+	padding-top: 3.5rem;
 	padding-inline: 0.75rem;
 	color: white;
+}
+
+.buttons {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+	gap: 0px 0px;
+	grid-template-areas:
+		'. . . .'
+		'. . . .'
+		'. . . eq'
+		'. . . eq'
+		'. . . eq';
+
+	height: 400px;
+}
+
+.btn {
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	font-size: 2rem;
+	font-weight: 400;
+	color: rgba(0, 0, 0, 0.75);
+}
+
+.operators {
+	background-color: rgba(255, 255, 255, 0.75);
+}
+
+.eq {
+	grid-area: eq;
+	background-color: #f98c6b;
 }
