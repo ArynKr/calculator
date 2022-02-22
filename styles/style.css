@@ -79,13 +79,25 @@ body {
 	color: rgba(0, 0, 0, 0.75);
 }
 
+.btn:hover {
+	background-color: rgba(240, 241, 215, 0.9);
+}
+
 .operators {
 	background-color: rgba(255, 255, 255, 0.75);
+}
+
+.operators:hover {
+	background-color: rgba(255, 255, 255, 0.5);
 }
 
 .eq {
 	grid-area: eq;
 	background-color: #f98c6b;
+}
+
+.eq:hover {
+	background-color: rgb(246, 178, 82);
 }
 
 .footer {
